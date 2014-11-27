@@ -1,0 +1,17 @@
+ToolRunner is best approach to register driver 
+
+It is used to pass the properties or configuration from command line
+Set the properties for DistributedCahe from command line
+
+-D
+-Conf
+-fs
+
+Example : WordCount.class  -D fs.defaultFS=somevalue input output
+
+ --> ToolRunner class should Extends Configured and Implements tool  *** MyTool extends Configured Implements Tool
+ -->All the logic of driver is present in ***** public int run(String args[]) method
+
+
+
+

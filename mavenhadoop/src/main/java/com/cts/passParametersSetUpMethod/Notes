@@ -1,0 +1,29 @@
+Setup is called once per mapper but cleanup method is called only once for entire map-reduce
+so if 100 mappers then it is called 100 times
+
+
+Pass parameter to configuration object in Setup code instead of passing parameter to command line
+use SetUp and cleanUp methods to access parameter.
+
+Same approach is used while passing from command line using tool runner.
+Get method from configuration object will be same
+
+
+--------------------------------------------------------------
+ToolRunner is best approach to register driver 
+
+It is used to pass the properties or configuration from command line
+Set the properties for DistributedCahe from command line
+
+-D
+-Conf
+-fs
+
+Example : WordCount.class  -D fs.defaultFS=somevalue input output
+
+ --> ToolRunner class should Extends Configured and Implements tool  *** MyTool extends Configured Implements Tool
+ -->All the logic of driver is present in ***** public int run(String args[]) method
+
+
+
+

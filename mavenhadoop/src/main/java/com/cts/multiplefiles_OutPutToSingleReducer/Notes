@@ -1,0 +1,17 @@
+Suppose we have 10 files,how can we make it as a single file and how to process it in mapreduce?
+
+Keep all files in single directory and specify input path as a directory -- Output can be from many reducers 
+
+We can't control the mapper and can control the reducers only
+
+--->****************************----------------------->
+To get single output file use below approach
+
+setNumReduceTasks=1 
+
+makes sure that only one reducer 
+is used and all the output goes to single file
+
+-----------------------------------------------------
+
+
